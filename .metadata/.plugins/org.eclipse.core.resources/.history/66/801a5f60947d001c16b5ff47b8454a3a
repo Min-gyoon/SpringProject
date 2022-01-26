@@ -1,0 +1,5 @@
+package pratice.demo.repository;
+
+public class MemberRepository {
+
+}

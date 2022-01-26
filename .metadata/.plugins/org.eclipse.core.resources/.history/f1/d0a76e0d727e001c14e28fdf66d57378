@@ -1,0 +1,12 @@
+package com.spring;
+
+public class MemberRegisterSevice {
+
+	
+	private MemberDao memberDao;
+	
+	public MemberRegisterSevice(MemberDao memberDao) {
+		this.memberDao = memberDao;
+		// TODO Auto-generated constructor stub
+	}
+}

@@ -1,0 +1,7 @@
+package pratice.demo.repository;
+
+
+
+public class MemoryMemberRepository implements MemberRepository{
+
+}

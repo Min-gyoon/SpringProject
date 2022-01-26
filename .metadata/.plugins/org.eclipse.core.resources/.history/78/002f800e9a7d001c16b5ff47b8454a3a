@@ -1,0 +1,13 @@
+package pratice.demo.repository;
+
+import org.junit.jupiter.api.Test;
+
+public class MemoryMemberRepositioryTest {
+
+	MemberRepository repository = new MemoryMemberRepository();
+	
+	@Test
+	public void save() {
+		
+	}
+}

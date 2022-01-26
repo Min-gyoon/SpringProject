@@ -1,0 +1,19 @@
+package com.example.entity;
+
+public class NewlecExam implements Exam {
+
+	
+	private int kor, eng, math, com;
+	@Override
+	public int total() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double avg() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

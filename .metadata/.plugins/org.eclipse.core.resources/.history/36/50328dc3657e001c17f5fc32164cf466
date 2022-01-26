@@ -1,0 +1,17 @@
+package com.example.demo;
+
+import com.example.entity.Exam;
+import com.example.entity.NewlecExam;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		
+		Exam exam = new NewlecExam();
+		ExamConsole console = new ExamConsole(exam);
+		
+		consol.print();
+	}
+
+}

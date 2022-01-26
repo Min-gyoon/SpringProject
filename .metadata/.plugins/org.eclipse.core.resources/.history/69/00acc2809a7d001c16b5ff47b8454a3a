@@ -1,0 +1,24 @@
+package pratice.demo.repository;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import pratice.demo.domain.Member;
+
+public class MemoryMemberRepositioryTest {
+
+	MemberRepository repository = new MemoryMemberRepository();
+	
+	@Test
+	public void save() {
+		Member member = new Member();
+		member.setName("String");
+		
+		repository.save(member);
+		Member result = repository.findById(member.getId()).get();
+		
+		
+		
+		Assertions.assertEquals(member, null);
+	}
+}

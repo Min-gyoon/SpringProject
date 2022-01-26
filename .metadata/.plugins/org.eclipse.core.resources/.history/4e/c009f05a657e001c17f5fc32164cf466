@@ -1,0 +1,13 @@
+package com.example.demo;
+
+import com.example.entity.Exam;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		
+		Exam exam = new NewlecExam();
+	}
+
+}

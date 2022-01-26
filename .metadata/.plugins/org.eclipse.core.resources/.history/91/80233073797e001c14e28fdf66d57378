@@ -1,0 +1,11 @@
+package com.spring;
+
+import com.dao.MemberDao;
+
+public class changePasswordService {
+
+	
+	private MemberDao memberDao;
+	
+	public void changePassword(String email,String newPwd)
+}

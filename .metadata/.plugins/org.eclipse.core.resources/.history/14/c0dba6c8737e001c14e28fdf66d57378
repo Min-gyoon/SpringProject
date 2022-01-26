@@ -1,0 +1,27 @@
+package com.spring;
+
+import java.time.LocalDateTime;
+
+public class MemberRegisterSevice {
+
+	
+	private MemberDao memberDao;
+	
+	public MemberRegisterSevice(MemberDao memberDao) {
+		this.memberDao = memberDao;
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Long regist(RegisterRequest req) {
+		Member member = memberDao.selectByEmail(req.getEmail());
+		if(member != null) {
+			throw new DuplicateMemberException("dup email " req.getEmail());
+		}
+		Member newMember = new Member(req.getEmail(),req.getPassword(),req.getNam(),LocalDateTime.now());
+		
+		memberDao.inser(newMember);
+		return newMember.getId();
+		
+	}
+	
+}

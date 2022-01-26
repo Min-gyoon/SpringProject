@@ -1,0 +1,23 @@
+package com.spring;
+
+import com.dao.Member;
+import com.dao.MemberDao;
+
+public class changePasswordService {
+
+	
+	private MemberDao memberDao;
+	
+	public void changePassword(String email,String newPwd) {
+		Member member = memberDao.selectByEmail(email);
+		
+		if(member == null) {
+			throw new MemberNotFoundException();
+		}
+		member.changePassword(email, newPwd);
+		memberDao.insert(member);
+	}
+	public void setMemberDao(MemberDao memberDao) {
+		this.memberDao = memberDao;
+	}
+}

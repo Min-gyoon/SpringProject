@@ -1,0 +1,6 @@
+package pratice.demo.repository;
+
+public class MemberRepository {
+Member save(Member member);
+
+}

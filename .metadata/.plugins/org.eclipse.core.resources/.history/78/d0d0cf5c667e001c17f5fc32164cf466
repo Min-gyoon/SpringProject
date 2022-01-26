@@ -1,0 +1,11 @@
+package com.example.ui;
+
+public class GridExamConsole implements ExamConsole {
+
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

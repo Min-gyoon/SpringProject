@@ -1,0 +1,8 @@
+package pratice.demo.domain;
+
+public class Member {
+
+	
+	private Long id;
+	privaite String name;
+}

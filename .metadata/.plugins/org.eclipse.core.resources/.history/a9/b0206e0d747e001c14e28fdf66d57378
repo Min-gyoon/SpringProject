@@ -1,0 +1,11 @@
+package com.dao;
+
+import java.time.LocalDateTime;
+
+public class MemberDao {
+
+	private String eamil;
+	private String name;
+	private String nam
+	LocalDateTime ldt = LocalDateTime.now();
+}
