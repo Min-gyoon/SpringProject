@@ -5,13 +5,18 @@ import java.util.Map;
 
 
 
-class A{
-	String name;
-	String color;
-	String a;
+interface A{
+	void print();
 }
-class B extends A{
+class B implements A{
 
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 }
 interface C{
 	
@@ -24,10 +29,10 @@ public class TestCode {
 
 	public static void main(String[] args) {
 		Map<String,A> map = new HashMap<>();
-		A a = new A();
-		a.name="As";
-		a.color="blue";
-		a.a="not";
+		//A a = new A();
+		//a.name="As";
+		//a.color="blue";
+		//a.a="not";
 		System.out.println(map.get("name"));
 		
 	A a2 = new B();

@@ -16,7 +16,7 @@ public class MainApplication {
 	private static ApplicationContext ctx = null;
 	
 	public static void main(String[] args) throws IOException{
-		ctx = new AnnotationConfigApplicationContext(AppCtx.java);
+		//ctx = new AnnotationConfigApplicationContext(AppCtx.java);
 	}
 
 }

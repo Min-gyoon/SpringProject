@@ -1,7 +1,0 @@
-package com.dao;
-
-public class MemberDao {
-
-	private Member member;
-	
-}

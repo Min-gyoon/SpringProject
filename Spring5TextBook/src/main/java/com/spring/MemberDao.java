@@ -4,7 +4,10 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+
 //회원 데이터 관련 클래스
+@Component
 public class MemberDao {
 private static long nextId = 0 ;
 	

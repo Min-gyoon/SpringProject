@@ -2,9 +2,12 @@ package com.spring;
 
 import java.time.LocalDateTime;
 
+import org.springframework.stereotype.Component;
+
 import com.exception.DuplicateMemberException;
 
 //회원 등록 서비스
+@Component
 public class MemberRegisterService {
 
 	private MemberDao memberDao;
