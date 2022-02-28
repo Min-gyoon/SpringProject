@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Exam exam = new NewlecExam() 과 같음  -->
+<bean id="exam" class="entity.NewlecExam"/>
+
+
+<!-- ExamConsole console = new GridExamConsole() 과 같음  -->
+<bean id="console" class="ui.GridExamConsole">
+<property name="exam"  ref="exam"></property>
+
+
+<!-- console.setExam(exam) -->
+<!-- ref의 exam은 7번라인과 같다  -->
+<!-- name ="exam"은 setExam()과 동일하다  -->
+</bean>
+</beans>

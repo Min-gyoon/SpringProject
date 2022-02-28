@@ -7,7 +7,8 @@ public class NewlecExam implements Exam {
 	
 	@Override
 	public int total() {
-		// TODO Auto-generated method stub
+		
+		
 		return kor+eng+math+com;
 	}
 	

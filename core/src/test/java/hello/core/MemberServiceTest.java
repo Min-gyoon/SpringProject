@@ -1,6 +1,7 @@
 package hello.core;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import hello.core.member.Grade;
@@ -11,8 +12,13 @@ import hello.core.member.MemberServiceImpl;
 public class MemberServiceTest {
 
 	//DIP À§¹Ý
-	MemberService memberservice = new MemberServiceImpl();
+	MemberService memberservice;// = new MemberServiceImpl();
 	
+	@BeforeEach
+	void BeforeEach() {
+		Appconfig appconfig = new Appconfig();
+		memberservice = appconfig.memberService();
+	}
 	
 	@Test
 	void join() {
