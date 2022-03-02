@@ -1,4 +1,4 @@
-package ui;
+package spring.ui;
 
 import entity.Exam;
 

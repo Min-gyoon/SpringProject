@@ -8,7 +8,7 @@ import org.springframework.web.servlet.mvc.Controller;
 
 public class IndexController implements Controller{
 
-	@Override //dispacher 기능은 빠져있음 
+	@Override //dispacher 
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("index controller");
 		ModelAndView mv = new ModelAndView();

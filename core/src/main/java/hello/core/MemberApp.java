@@ -20,7 +20,7 @@ public class MemberApp {
 			//스프링이 저 해당 클래스 파일의 빈들을 스프링 컨테이너가 객체 관리를 해주는 것 
 			//직접 찾아오는것이 아닌 17번라인처럼 : 컨테이너가 대신 해줌 
 			
-			MemberService memberService =  applicationContext.getBean("memberService",MemberService.class);
+			MemberService memberService = applicationContext.getBean("memberService",MemberService.class);
 			
 			Member member = new Member(1L,"memberA",Grade.VIP);
 			memberService.join(member);

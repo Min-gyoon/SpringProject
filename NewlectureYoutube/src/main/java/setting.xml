@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-<!-- Exam exam = new NewlecExam() 과 같음  -->
-<bean id="exam" class="entity.NewlecExam"/>
-
-
-<!-- ExamConsole console = new GridExamConsole() 과 같음  -->
-<bean id="console" class="ui.GridExamConsole">
-<property name="exam"  ref="exam"></property>
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 
-<!-- console.setExam(exam) -->
-<!-- ref의 exam은 7번라인과 같다  -->
-<!-- name ="exam"은 setExam()과 동일하다  -->
+<context:component-scan base-package="spring.ui, entity"/>
+<!--  Exam exam = new NewlecExam(); 를 표현하면 -->
+<!-- <bean id="exam" class="entity.NewlecExam">
+<property name="kor" value="10"/>
+<property name="eng" value="30"/>
+<property name="math" value="40"/>
+<property name="com" value="10"/>
+위 아래 방법 다 동일하다 위는 Exam exam 
+= new NewlecExam(10,30,40,10) 과 동일
+
 </bean>
+
+<context:annotation-config/>
+ ExamConsole console = new GridExamConsole(exam);
+<bean id="console" class="ui.InlineExamConsole">
+console.setExam(exam);
+<property name="exam" ref="exam"></property>
+exam은 setExam이다 내규상 set은 뺴고 앞글자를 소문자로 시작한다
+ref의 exam은 8번라인과 같다 value값이면 value에 ref방식이면 ref에
+
+</bean> -->
 </beans>
